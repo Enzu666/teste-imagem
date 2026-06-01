@@ -1,3 +1,5 @@
+import { renderizarPagina } from "../main"
+
 export function criarPreview(){
     const formulario = document.createElement('form')
 
@@ -32,6 +34,7 @@ export function criarPreview(){
     cancelarButton.className = 'button'
     cancelarButton.type = 'button'
     cancelarButton.textContent = 'Cancelar'
+    cancelarButton = () => renderizarPagina()
 
     buttonContainer.append(uploadButton, cancelarButton)
     

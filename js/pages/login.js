@@ -1,4 +1,5 @@
 'use strict'
+import { renderizarPagina } from '../main'
 
 export function criarLogin() {
     const formulario = document.createElement('form')
@@ -17,6 +18,7 @@ export function criarLogin() {
     loginButton.type = 'button'
     loginButton.textContent = 'ENTRAR'
     loginButton.className = 'button'
+    loginButton.onclick = () => renderizarPagina('preview')
 
     formulario.append(emailInput, senhaInput, loginButton)
 
